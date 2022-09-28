@@ -1,6 +1,7 @@
 package main
 
 import (
+	"betulator/internal/math"
 	"betulator/pkg/crawlers/meridianbet"
 	"fmt"
 	"os"
@@ -9,38 +10,63 @@ import (
 	"github.com/shopspring/decimal"
 )
 
+type Event struct {
+	Outcome []string
+	Odds    []decimal.Decimal
+	House   []string
+}
+
 func main() {
 
-	bets, err := meridianbet.GetBets()
+	meridianbetFootballEvents, err := meridianbet.GetFootballEventsSortedByOutcome()
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	for key, val := range bets {
-		printBet(key[:], val[:])
+	footballEvents := map[string]Event{}
+
+	for _, event := range meridianbetFootballEvents {
+
+		outcomesKey := ""
+
+		houses := []string{}
+
+		for indx := range event.Outcome {
+			outcomesKey += event.Outcome[indx] + ","
+			houses = append(houses, "meridianbet")
+		}
+
+		footballEvents[outcomesKey] = Event{
+			Outcome: event.Outcome,
+			Odds:    event.Odds,
+			House:   houses,
+		}
 	}
 
+	for _, event := range footballEvents {
+		printEvent(event)
+	}
 }
 
-func printBet(winners []string, odds []decimal.Decimal) {
+func printEvent(event Event) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 
-	t.AppendHeader(table.Row{"Outcome", "Odds"})
+	t.AppendHeader(table.Row{"Outcome", "Odds", "House", "Bet Coefficient"})
 
-	winnersRow := make([]interface{}, len(winners))
-	for i := range winners {
-		winnersRow[i] = winners[i]
+	for indx := range event.Outcome {
+		t.AppendRow(table.Row{
+			event.Outcome[indx],
+			event.Odds[indx],
+			event.House[indx],
+		})
+		t.AppendSeparator()
 	}
-	t.AppendHeader(winnersRow)
 
-	oddsRow := make([]interface{}, len(odds))
-	for i := range odds {
-		oddsRow[i] = odds[i]
-	}
-	t.AppendRow(oddsRow)
+	totalOdds := math.CalculateOdds(event.Odds)
+
 	t.AppendSeparator()
-	t.AppendFooter(table.Row{"", "TOTAL ODDS", 10000})
+	t.AppendFooter(table.Row{"TOTAL ODDS", totalOdds})
 
 	t.SetStyle(table.StyleLight)
 	t.Render()

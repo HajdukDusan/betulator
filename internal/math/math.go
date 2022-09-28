@@ -7,7 +7,7 @@ func CalculateOdds(odds []decimal.Decimal) decimal.Decimal {
 	result := decimal.Zero
 
 	for indx := range odds {
-		result.Add(decimal.NewFromInt(1).Div(odds[indx]))
+		result = result.Add(decimal.NewFromInt(1).Div(odds[indx]))
 	}
 
 	return result

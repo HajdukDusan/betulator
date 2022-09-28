@@ -10,12 +10,31 @@ import (
 	"github.com/shopspring/decimal"
 )
 
-type outcome struct {
-	winner string
-	odds   decimal.Decimal
+var houseLink string = "https://meridianbet.rs/"
+
+type Event struct {
+	Outcome []string
+	Odds    []decimal.Decimal
 }
 
-func GetBets() (map[[3]string][]decimal.Decimal, error) {
+func GetFootballEventsSortedByOutcome() ([]Event, error) {
+
+	events, err := GetFootballEvents()
+	if err != nil {
+		return nil, err
+	}
+
+	for _, event := range events {
+		if event.Outcome[0] < event.Outcome[2] {
+			event.Outcome[0], event.Outcome[2] = event.Outcome[2], event.Outcome[0]
+			event.Odds[0], event.Odds[2] = event.Odds[2], event.Odds[0]
+		}
+	}
+
+	return events, nil
+}
+
+func GetFootballEvents() ([]Event, error) {
 
 	currentTime := time.Now().Format(time.RFC3339)
 
@@ -27,7 +46,6 @@ func GetBets() (map[[3]string][]decimal.Decimal, error) {
 	resultBytes := []byte(jsonResult)
 
 	// // events[0, n]/events[0, n]/marketShort[0]/selection[0,1,2]/price
-
 	// // events[0]/events[0]/team[0]/name		team[1]/name
 
 	parsedData := Football{}
@@ -39,14 +57,11 @@ func GetBets() (map[[3]string][]decimal.Decimal, error) {
 		return nil, err
 	}
 
-	result := make(map[[3]string][]decimal.Decimal)
+	events := []Event{}
 
 	for _, eventGroup := range parsedData.Events {
 
 		for _, event := range eventGroup.Events {
-
-			teamA := strings.ToLower(event.Team[0].Name)
-			teamB := strings.ToLower(event.Team[1].Name)
 
 			oddsA, err := decimal.NewFromString(event.MarketShort[0].Selection[0].Price)
 			if err != nil {
@@ -61,13 +76,22 @@ func GetBets() (map[[3]string][]decimal.Decimal, error) {
 				return nil, err
 			}
 
-			if teamA >= teamB {
-				result[[3]string{teamA, "draw", teamB}] = []decimal.Decimal{oddsA, oddsDraw, oddsB}
-			} else {
-				result[[3]string{teamB, "draw", teamA}] = []decimal.Decimal{oddsB, oddsDraw, oddsA}
+			newEvent := Event{
+				Outcome: []string{
+					strings.ToLower(event.Team[0].Name),
+					"draw",
+					strings.ToLower(event.Team[1].Name),
+				},
+				Odds: []decimal.Decimal{
+					oddsA,
+					oddsDraw,
+					oddsB,
+				},
 			}
+
+			events = append(events, newEvent)
 		}
 	}
 
-	return result, nil
+	return events, nil
 }
