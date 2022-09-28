@@ -4,27 +4,18 @@ import (
 	"betulator/pkg/httprequest"
 	"encoding/json"
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/shopspring/decimal"
 )
 
-// func GetBetOdds() (map[] event, error) {
-
-// }
-
-type FootballData struct {
-	selectedFilter string `json:"selectedFilter"`
-	events         []struct {
-		events []struct {
-			team []struct {
-				name string `json:name`
-			} `json:"events"`
-		} `json:"events"`
-	} `json:"events"`
+type outcome struct {
+	winner string
+	odds   decimal.Decimal
 }
 
-func GetBetOdds() (map[interface{}][]decimal.Decimal, error) {
+func GetBets() (map[[3]string][]decimal.Decimal, error) {
 
 	currentTime := time.Now().Format(time.RFC3339)
 
@@ -48,18 +39,35 @@ func GetBetOdds() (map[interface{}][]decimal.Decimal, error) {
 		return nil, err
 	}
 
+	result := make(map[[3]string][]decimal.Decimal)
+
 	for _, eventGroup := range parsedData.Events {
 
 		for _, event := range eventGroup.Events {
 
-			fmt.Println(event.Team[0])
-			fmt.Println(event.Team[1])
+			teamA := strings.ToLower(event.Team[0].Name)
+			teamB := strings.ToLower(event.Team[1].Name)
 
-			fmt.Println(event.MarketShort[0].Selection[0].Price)
-			fmt.Println(event.MarketShort[0].Selection[1].Price)
-			fmt.Println(event.MarketShort[0].Selection[2].Price)
+			oddsA, err := decimal.NewFromString(event.MarketShort[0].Selection[0].Price)
+			if err != nil {
+				return nil, err
+			}
+			oddsDraw, err := decimal.NewFromString(event.MarketShort[0].Selection[1].Price)
+			if err != nil {
+				return nil, err
+			}
+			oddsB, err := decimal.NewFromString(event.MarketShort[0].Selection[2].Price)
+			if err != nil {
+				return nil, err
+			}
+
+			if teamA >= teamB {
+				result[[3]string{teamA, "draw", teamB}] = []decimal.Decimal{oddsA, oddsDraw, oddsB}
+			} else {
+				result[[3]string{teamB, "draw", teamA}] = []decimal.Decimal{oddsB, oddsDraw, oddsA}
+			}
 		}
 	}
 
-	return nil, nil
+	return result, nil
 }
