@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"os"
 	"strings"
 	"time"
@@ -22,36 +21,9 @@ type Event struct {
 
 func GetFootballEvents() ([]Event, error) {
 
-	// response, err := http.Get("https://www.mozzartbet.com/en#/betting/?sid=1")
-	// if err != nil {
-	// 	return nil, err
-	// }
-
-	// ctx, cancel := chromedp.NewContext(context.Background())
-	// defer cancel()
-
-	// // run task list
-	// var res string
-	// err := chromedp.Run(ctx,
-	// 	chromedp.Navigate(`https://pkg.go.dev/time`),
-	// 	chromedp.Text(`.Documentation-overview`, &res, chromedp.NodeVisible),
-	// )
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// log.Println(strings.TrimSpace(res))
-
-	scrap()
-
-	return nil, nil
-}
-
-func scrap() {
-
 	dir, err := ioutil.TempDir("", "chromedp-example")
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 	defer os.RemoveAll(dir)
 
@@ -71,30 +43,66 @@ func scrap() {
 
 	err = chromedp.Run(ctx,
 		chromedp.Navigate(`https://www.mozzartbet.com/en#/betting/?sid=1`),
-
-		// chromedp.WaitVisible(`competition`, chromedp.),
-		// chromedp.Text(``, &res, chromedp.NodeVisible, chromedp.ByQuery),
-		// chromedp.Text(`competition`, &res, chromedp.NodeVisible, chromedp.ByQuery),
-		// chromedp.Sleep(time.Second*10),
-		// chromedp.ScrollIntoView(`.widget-footer-v2`),
-		// chromedp.Text(`.sportsoffer`, &res, chromedp.ByQuery),
 		chromedp.OuterHTML(".sportsoffer", &body, chromedp.ByQuery),
 	)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
+	}
+
+	err = chromedp.Cancel(ctx)
+	if err != nil {
+		return nil, err
 	}
 
 	doc, err := goquery.NewDocumentFromReader(strings.NewReader(body))
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 
-	doc.Find("div.part1").Each(func(i int, s *goquery.Selection) {
+	events := []Event{}
 
-		fmt.Println(s.Text())
+	doc.Find("selection.promo-matches, div.competition").Find("div.part1").Each(func(i int, query *goquery.Selection) {
+
+		outcomes := make([]string, 3)
+		startTime := time.Now()
+
+		query.Find("a.pairs").Find("span").Each(func(i int, query *goquery.Selection) {
+
+			if i == 0 {
+
+				//startTime = nil
+
+				outcomes[1] = "draw"
+			} else if i == 1 {
+				outcomes[0] = query.Text()
+			} else if i == 2 {
+				outcomes[2] = query.Text()
+			}
+		})
+
+		events = append(events, Event{Outcome: outcomes, StartTime: startTime})
 	})
 
-	// fmt.Printf("h1 contains: '%s'\n", res)
+	doc.Find("selection.promo-matches, div.competition").Find("div.part2").Each(func(i int, query *goquery.Selection) {
+
+		odds := []decimal.Decimal{}
+
+		query.Find("span.odd-font").EachWithBreak(func(i int, query *goquery.Selection) bool {
+
+			dec, err := decimal.NewFromString(query.Text())
+			if err != nil {
+				fmt.Println(err)
+			}
+
+			odds = append(odds, dec)
+
+			return true
+		})
+
+		events[i].Odds = odds
+	})
+
 	fmt.Printf("\nTook: %f secs\n", time.Since(start).Seconds())
 
+	return events, nil
 }
