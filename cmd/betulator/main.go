@@ -2,21 +2,32 @@ package main
 
 import (
 	"betulator/internal/math"
-	"betulator/pkg/crawlers/meridianbet"
+	"betulator/pkg/scrapers/meridianbet"
+	"betulator/pkg/scrapers/mozzartbet"
 	"fmt"
 	"os"
+	"sort"
+	"time"
 
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/shopspring/decimal"
 )
 
 type Event struct {
-	Outcome []string
-	Odds    []decimal.Decimal
-	House   []string
+	Outcome   []string
+	Odds      []decimal.Decimal
+	House     []string
+	StartTime time.Time
 }
 
 func main() {
+
+	_, err := mozzartbet.GetFootballEvents()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	return
 
 	meridianbetFootballEvents, err := meridianbet.GetFootballEventsSortedByOutcome()
 	if err != nil {
@@ -24,6 +35,8 @@ func main() {
 	}
 
 	footballEvents := map[string]Event{}
+
+	eventsArr := []Event{}
 
 	for _, event := range meridianbetFootballEvents {
 
@@ -36,16 +49,26 @@ func main() {
 			houses = append(houses, "meridianbet")
 		}
 
-		footballEvents[outcomesKey] = Event{
-			Outcome: event.Outcome,
-			Odds:    event.Odds,
-			House:   houses,
+		event := Event{
+			Outcome:   event.Outcome,
+			Odds:      event.Odds,
+			House:     houses,
+			StartTime: event.StartTime,
 		}
+
+		footballEvents[outcomesKey] = event
+		eventsArr = append(eventsArr, event)
 	}
 
-	for _, event := range footballEvents {
+	// sort events array by time
+	sort.Slice(eventsArr, func(i, j int) bool {
+		return eventsArr[i].StartTime.Before(eventsArr[j].StartTime)
+	})
+
+	for _, event := range eventsArr {
 		printEvent(event)
 	}
+
 }
 
 func printEvent(event Event) {
@@ -66,7 +89,8 @@ func printEvent(event Event) {
 	totalOdds := math.CalculateOdds(event.Odds)
 
 	t.AppendSeparator()
-	t.AppendFooter(table.Row{"TOTAL ODDS", totalOdds})
+	t.AppendFooter(table.Row{"Total Odds", totalOdds})
+	t.AppendFooter(table.Row{"Start Time", event.StartTime.Format(time.RFC822)})
 
 	t.SetStyle(table.StyleLight)
 	t.Render()

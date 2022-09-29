@@ -13,8 +13,9 @@ import (
 var houseLink string = "https://meridianbet.rs/"
 
 type Event struct {
-	Outcome []string
-	Odds    []decimal.Decimal
+	Outcome   []string
+	Odds      []decimal.Decimal
+	StartTime time.Time
 }
 
 func GetFootballEventsSortedByOutcome() ([]Event, error) {
@@ -44,9 +45,6 @@ func GetFootballEvents() ([]Event, error) {
 	}
 
 	resultBytes := []byte(jsonResult)
-
-	// // events[0, n]/events[0, n]/marketShort[0]/selection[0,1,2]/price
-	// // events[0]/events[0]/team[0]/name		team[1]/name
 
 	parsedData := Football{}
 
@@ -87,6 +85,7 @@ func GetFootballEvents() ([]Event, error) {
 					oddsDraw,
 					oddsB,
 				},
+				StartTime: event.StartTime,
 			}
 
 			events = append(events, newEvent)
