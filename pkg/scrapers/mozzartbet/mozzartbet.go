@@ -1,6 +1,7 @@
 package mozzartbet
 
 import (
+	"betulator/pkg/model"
 	"context"
 	"fmt"
 	"io/ioutil"
@@ -13,13 +14,7 @@ import (
 	"github.com/shopspring/decimal"
 )
 
-type Event struct {
-	Outcome   []string
-	Odds      []decimal.Decimal
-	StartTime time.Time
-}
-
-func GetFootballEvents() ([]Event, error) {
+func GetFootballEvents() ([]model.Event, error) {
 
 	dir, err := ioutil.TempDir("", "chromedp-example")
 	if err != nil {
@@ -36,9 +31,6 @@ func GetFootballEvents() ([]Event, error) {
 
 	ctx, _ := chromedp.NewContext(allocCtx)
 
-	start := time.Now()
-
-	// var res string
 	var body string
 
 	err = chromedp.Run(ctx,
@@ -59,7 +51,7 @@ func GetFootballEvents() ([]Event, error) {
 		return nil, err
 	}
 
-	events := []Event{}
+	events := []model.Event{}
 
 	doc.Find("selection.promo-matches, div.competition").Find("div.part1").Each(func(i int, query *goquery.Selection) {
 
@@ -80,7 +72,7 @@ func GetFootballEvents() ([]Event, error) {
 			}
 		})
 
-		events = append(events, Event{Outcome: outcomes, StartTime: startTime})
+		events = append(events, model.Event{Outcome: outcomes, StartTime: startTime})
 	})
 
 	doc.Find("selection.promo-matches, div.competition").Find("div.part2").Each(func(i int, query *goquery.Selection) {
@@ -101,8 +93,6 @@ func GetFootballEvents() ([]Event, error) {
 
 		events[i].Odds = odds
 	})
-
-	fmt.Printf("\nTook: %f secs\n", time.Since(start).Seconds())
 
 	return events, nil
 }

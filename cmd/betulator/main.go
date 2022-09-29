@@ -2,6 +2,8 @@ package main
 
 import (
 	"betulator/internal/math"
+	"betulator/internal/util"
+	"betulator/pkg/model"
 	"betulator/pkg/scrapers/mozzartbet"
 	"fmt"
 	"os"
@@ -18,20 +20,25 @@ type Event struct {
 	StartTime time.Time
 }
 
-func main() {
+func CollectHouseSportEvents(getEvents func() ([]model.Event, error)) []model.Event {
+	start := time.Now()
 
-	mozzartbetFootballEvents, err := mozzartbet.GetFootballEvents()
+	events, err := getEvents()
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	fmt.Printf("\nCollected: %d events\n", len(mozzartbetFootballEvents))
+	fmt.Printf("\nCollected: %d events\n", len(events))
+	fmt.Printf("\nTook: %f secs\n", time.Since(start).Seconds())
 
-	footballEvents := map[string]Event{}
+	util.SortByOutcome(events)
 
-	eventsArr := []Event{}
+	return events
+}
 
-	for _, event := range mozzartbetFootballEvents {
+func MergeEventsByBestOdds(events map[string]Event, newEvents []model.Event) {
+
+	for _, event := range newEvents {
 
 		outcomesKey := ""
 
@@ -49,51 +56,19 @@ func main() {
 			StartTime: event.StartTime,
 		}
 
-		footballEvents[outcomesKey] = event
-		eventsArr = append(eventsArr, event)
+		events[outcomesKey] = event
 	}
+}
 
-	// // sort events array by time
-	// sort.Slice(eventsArr, func(i, j int) bool {
-	// 	return eventsArr[i].StartTime.Before(eventsArr[j].StartTime)
-	// })
+func main() {
 
-	for _, event := range eventsArr {
-		printEvent(event)
-	}
+	mozzartbetFootballEvents := CollectHouseSportEvents(mozzartbet.GetFootballEvents)
+	// meridianbetFootballEvents := CollectHouseSportEvents(meridianbet.GetFootballEvents)
 
-	return
+	events := map[string]Event{}
 
-	// meridianbetFootballEvents, err := meridianbet.GetFootballEventsSortedByOutcome()
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-
-	// footballEvents := map[string]Event{}
-
-	// eventsArr := []Event{}
-
-	// for _, event := range meridianbetFootballEvents {
-
-	// 	outcomesKey := ""
-
-	// 	houses := []string{}
-
-	// 	for indx := range event.Outcome {
-	// 		outcomesKey += event.Outcome[indx] + ","
-	// 		houses = append(houses, "meridianbet")
-	// 	}
-
-	// 	event := Event{
-	// 		Outcome:   event.Outcome,
-	// 		Odds:      event.Odds,
-	// 		House:     houses,
-	// 		StartTime: event.StartTime,
-	// 	}
-
-	// 	footballEvents[outcomesKey] = event
-	// 	eventsArr = append(eventsArr, event)
-	// }
+	MergeEventsByBestOdds(events, mozzartbetFootballEvents)
+	// MergeEventsByBestOdds(events, meridianbetFootballEvents)
 
 	// // sort events array by time
 	// sort.Slice(eventsArr, func(i, j int) bool {
@@ -106,7 +81,7 @@ func main() {
 
 }
 
-func printEvent(event Event) {
+func ShowEvent(event Event) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 

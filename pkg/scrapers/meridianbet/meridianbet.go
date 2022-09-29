@@ -2,6 +2,7 @@ package meridianbet
 
 import (
 	"betulator/pkg/httprequest"
+	"betulator/pkg/model"
 	"encoding/json"
 	"fmt"
 	"strings"
@@ -12,30 +13,7 @@ import (
 
 var houseLink string = "https://meridianbet.rs/"
 
-type Event struct {
-	Outcome   []string
-	Odds      []decimal.Decimal
-	StartTime time.Time
-}
-
-func GetFootballEventsSortedByOutcome() ([]Event, error) {
-
-	events, err := GetFootballEvents()
-	if err != nil {
-		return nil, err
-	}
-
-	for _, event := range events {
-		if event.Outcome[0] < event.Outcome[2] {
-			event.Outcome[0], event.Outcome[2] = event.Outcome[2], event.Outcome[0]
-			event.Odds[0], event.Odds[2] = event.Odds[2], event.Odds[0]
-		}
-	}
-
-	return events, nil
-}
-
-func GetFootballEvents() ([]Event, error) {
+func GetFootballEvents() ([]model.Event, error) {
 
 	currentTime := time.Now().Format(time.RFC3339)
 
@@ -55,7 +33,7 @@ func GetFootballEvents() ([]Event, error) {
 		return nil, err
 	}
 
-	events := []Event{}
+	events := []model.Event{}
 
 	for _, eventGroup := range parsedData.Events {
 
@@ -74,7 +52,7 @@ func GetFootballEvents() ([]Event, error) {
 				return nil, err
 			}
 
-			newEvent := Event{
+			newEvent := model.Event{
 				Outcome: []string{
 					strings.ToLower(event.Team[0].Name),
 					"draw",
