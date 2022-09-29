@@ -6,8 +6,10 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 	"time"
 
+	"github.com/PuerkitoBio/goquery"
 	"github.com/chromedp/chromedp"
 	"github.com/shopspring/decimal"
 )
@@ -64,26 +66,35 @@ func scrap() {
 
 	start := time.Now()
 
-	var res string
-	err = chromedp.Run(ctx,
-		// emulation.SetUserAgentOverride("WebScraper 1.0"),
-		chromedp.Navigate(`https://www.mozzartbet.com/en#/betting/?sid=1`),
+	// var res string
+	var body string
 
-		// wait for footer element is visible (ie, page is loaded)
+	err = chromedp.Run(ctx,
+		chromedp.Navigate(`https://www.mozzartbet.com/en#/betting/?sid=1`),
 
 		// chromedp.WaitVisible(`competition`, chromedp.),
 		// chromedp.Text(``, &res, chromedp.NodeVisible, chromedp.ByQuery),
 		// chromedp.Text(`competition`, &res, chromedp.NodeVisible, chromedp.ByQuery),
-		chromedp.Sleep(time.Second*10),
+		// chromedp.Sleep(time.Second*10),
 		// chromedp.ScrollIntoView(`.widget-footer-v2`),
-		// chromedp.WaitVisible(`competition`),
-		chromedp.Text(`body`, &res, chromedp.NodeVisible, chromedp.ByQuery),
+		// chromedp.Text(`.sportsoffer`, &res, chromedp.ByQuery),
+		chromedp.OuterHTML(".sportsoffer", &body, chromedp.ByQuery),
 	)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("h1 contains: '%s'\n", res)
+	doc, err := goquery.NewDocumentFromReader(strings.NewReader(body))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	doc.Find("div.part1").Each(func(i int, s *goquery.Selection) {
+
+		fmt.Println(s.Text())
+	})
+
+	// fmt.Printf("h1 contains: '%s'\n", res)
 	fmt.Printf("\nTook: %f secs\n", time.Since(start).Seconds())
 
 }
