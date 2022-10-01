@@ -5,6 +5,7 @@ import (
 	"betulator/internal/util"
 	"betulator/pkg/model"
 	"betulator/pkg/scrapers/meridianbet"
+	"betulator/pkg/scrapers/soccerbet"
 	"fmt"
 	"os"
 	"strings"
@@ -21,7 +22,7 @@ func CollectHouseSportEvents(getEvents func() ([]model.Event, error)) []model.Ev
 		panic(err)
 	}
 
-	fmt.Printf("\nCollected: %d events\n", len(events))
+	fmt.Printf("\nCollected: %d events", len(events))
 	fmt.Printf("\nTook: %f secs\n", time.Since(start).Seconds())
 
 	util.SortByOutcome(events)
@@ -77,6 +78,12 @@ func CheckIfEventsMatch(currentEvent model.Event, newEvent model.Event) bool {
 
 		for outcomeIndx, word := range combination {
 
+			// skip words with less than 4 letters
+			if len(word) < 4 {
+				found = false
+				break
+			}
+
 			wordFound := false
 
 			outcomeWords := strings.Fields(strings.ToLower(newEvent.Outcome[outcomeIndx]))
@@ -113,7 +120,7 @@ func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event, house
 		for _, event := range *events {
 			if CheckIfEventsMatch(event, newEvent) {
 
-				fmt.Println("isti su", event.Outcome, newEvent.Outcome)
+				fmt.Println("Same are: ", event.Outcome, newEvent.Outcome)
 
 				// merge best odds
 				for indx := range event.Odds {
@@ -144,21 +151,20 @@ func main() {
 
 	// mozzartbetFootballEvents := CollectHouseSportEvents(mozzartbet.GetFootballEvents)
 	meridianbetFootballEvents := CollectHouseSportEvents(meridianbet.GetFootballEvents)
-
-	// soccerbetFootballEvents := CollectHouseSportEvents(soccerbet.GetFootballEvents)
+	soccerbetFootballEvents := CollectHouseSportEvents(soccerbet.GetFootballEvents)
 
 	events := make([]model.Event, 0)
 
 	// MergeEventsByBestOdds(events, mozzartbetFootballEvents)
 	MergeEventsByBestOdds(&events, meridianbetFootballEvents, "meridianbet")
-	// MergeEventsByBestOdds(events, soccerbetFootballEvents, "soccerbet")
+	MergeEventsByBestOdds(&events, soccerbetFootballEvents, "soccerbet")
 
 	// // sort events array by time
 	// sort.Slice(eventsArr, func(i, j int) bool {
 	// 	return eventsArr[i].StartTime.Before(eventsArr[j].StartTime)
 	// })
 
-	fmt.Println(len(events))
+	fmt.Println("Events Sum: ", len(events))
 
 	for _, event := range events {
 		ShowEvent(event)

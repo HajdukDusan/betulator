@@ -34,17 +34,19 @@ func GetFootballEvents() ([]model.Event, error) {
 
 	events := []model.Event{}
 
+	loc, _ := time.LoadLocation("Europe/Belgrade")
+
 	for _, event := range parsedData.Events {
 
-		oddsA, err := decimal.NewFromString(event.StandardShortMarkets[0].Selection[0].Price)
+		oddsA, err := decimal.NewFromString(event.StandardShortMarketsMobile[0].Selection[0].Price)
 		if err != nil {
 			return nil, err
 		}
-		oddsDraw, err := decimal.NewFromString(event.StandardShortMarkets[0].Selection[1].Price)
+		oddsDraw, err := decimal.NewFromString(event.StandardShortMarketsMobile[0].Selection[1].Price)
 		if err != nil {
 			return nil, err
 		}
-		oddsB, err := decimal.NewFromString(event.StandardShortMarkets[0].Selection[2].Price)
+		oddsB, err := decimal.NewFromString(event.StandardShortMarketsMobile[0].Selection[2].Price)
 		if err != nil {
 			return nil, err
 		}
@@ -66,7 +68,7 @@ func GetFootballEvents() ([]model.Event, error) {
 				oddsDraw,
 				oddsB,
 			},
-			StartTime: event.StartTime,
+			StartTime: event.StartTime.In(loc),
 			House:     house,
 		}
 
