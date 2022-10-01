@@ -5,7 +5,6 @@ import (
 	"betulator/pkg/model"
 	"encoding/json"
 	"fmt"
-	"strings"
 	"time"
 
 	"github.com/shopspring/decimal"
@@ -17,7 +16,7 @@ func GetFootballEvents() ([]model.Event, error) {
 
 	currentTime := time.Now().Format(time.RFC3339)
 
-	jsonResult, err := httprequest.Get("https://meridianbet.rs/sails/sport-with-leagues/58/date/" + currentTime + "/filter/all/filterPosition/0,0,0")
+	jsonResult, err := httprequest.Get("https://meridianbet.rs/sails/sport-with-leagues/58/date/" + currentTime + "/filter/oneDay/offset/0?filterPositions=0,0,0")
 	if err != nil {
 		return nil, err
 	}
@@ -54,9 +53,9 @@ func GetFootballEvents() ([]model.Event, error) {
 
 			newEvent := model.Event{
 				Outcome: []string{
-					strings.ToLower(event.Team[0].Name),
+					event.Team[0].Name,
 					"draw",
-					strings.ToLower(event.Team[1].Name),
+					event.Team[1].Name,
 				},
 				Odds: []decimal.Decimal{
 					oddsA,

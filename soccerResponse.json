@@ -1,0 +1,2502 @@
+[
+    {
+        "Id": 2984206,
+        "HomeCompetitorName": "Ryukyu",
+        "AwayCompetitorName": "Yokohama FC",
+        "Code": 782,
+        "ExternalId": 31769577,
+        "StreamId": null,
+        "StartDate": "2022-10-01T11:30:00",
+        "Status": 0,
+        "CompetitionId": 209,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1058104213,
+                "Odds": 3.95,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1058104214,
+                "Odds": 3.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1058104215,
+                "Odds": 2.00,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1058104278,
+                "Odds": 1.67,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1058104295,
+                "Odds": 2.07,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1058104342,
+                "Odds": 1.83,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1058104348,
+                "Odds": 1.63,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1058104430,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1058104431,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1058104529,
+                "Odds": 6.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1058104545,
+                "Odds": 3.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2984225,
+        "HomeCompetitorName": "Anyang",
+        "AwayCompetitorName": "Ansan",
+        "Code": 767,
+        "ExternalId": 31803419,
+        "StreamId": "8595143",
+        "StartDate": "2022-10-01T11:30:00",
+        "Status": 0,
+        "CompetitionId": 320,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1058111628,
+                "Odds": 1.68,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1058111629,
+                "Odds": 3.60,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1058111630,
+                "Odds": 4.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1058111693,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1058111710,
+                "Odds": 1.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1058111757,
+                "Odds": 1.73,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1058111763,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1058111845,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1058111846,
+                "Odds": 1.83,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1058111944,
+                "Odds": 2.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1058111960,
+                "Odds": 8.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003304,
+        "HomeCompetitorName": "Tanjong Pagar",
+        "AwayCompetitorName": "Young Lions",
+        "Code": 3003,
+        "ExternalId": 31806383,
+        "StreamId": null,
+        "StartDate": "2022-10-01T11:30:00",
+        "Status": 0,
+        "CompetitionId": 1778,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061121760,
+                "Odds": 1.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061121761,
+                "Odds": 6.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061121762,
+                "Odds": 9.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061121825,
+                "Odds": 4.00,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061121842,
+                "Odds": 1.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061121889,
+                "Odds": 1.23,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061121895,
+                "Odds": 1.15,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061121977,
+                "Odds": 1.58,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061121978,
+                "Odds": 2.22,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061122076,
+                "Odds": 1.38,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061122092,
+                "Odds": 13.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003305,
+        "HomeCompetitorName": "Tampines Rovers",
+        "AwayCompetitorName": "Geylang Utd.",
+        "Code": 3004,
+        "ExternalId": 31806385,
+        "StreamId": null,
+        "StartDate": "2022-10-01T11:30:00",
+        "Status": 0,
+        "CompetitionId": 1778,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061122470,
+                "Odds": 2.10,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061122471,
+                "Odds": 3.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061122472,
+                "Odds": 2.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061122535,
+                "Odds": 3.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061122552,
+                "Odds": 1.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061122599,
+                "Odds": 1.31,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061122605,
+                "Odds": 1.21,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061122687,
+                "Odds": 1.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061122688,
+                "Odds": 3.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061122786,
+                "Odds": 2.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061122802,
+                "Odds": 3.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2982342,
+        "HomeCompetitorName": "Sydney Utd.",
+        "AwayCompetitorName": "Macarthur",
+        "Code": 813,
+        "ExternalId": 36087369,
+        "StreamId": null,
+        "StartDate": "2022-10-01T11:45:00",
+        "Status": 0,
+        "CompetitionId": 907,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1057448743,
+                "Odds": 13.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1057448744,
+                "Odds": 6.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1057448745,
+                "Odds": 1.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1057448808,
+                "Odds": 2.33,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1057448825,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1057448872,
+                "Odds": 1.48,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1057448878,
+                "Odds": 1.35,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1057448960,
+                "Odds": 2.32,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1057448961,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1057449059,
+                "Odds": 26.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1057449075,
+                "Odds": 1.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2984207,
+        "HomeCompetitorName": "Oita",
+        "AwayCompetitorName": "V-Varen N.",
+        "Code": 783,
+        "ExternalId": 31769575,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 209,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1058104887,
+                "Odds": 1.95,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1058104888,
+                "Odds": 3.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1058104889,
+                "Odds": 3.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1058104952,
+                "Odds": 1.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1058104969,
+                "Odds": 1.98,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1058105016,
+                "Odds": 1.78,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1058105022,
+                "Odds": 1.58,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1058105104,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1058105105,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1058105203,
+                "Odds": 3.10,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1058105219,
+                "Odds": 6.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2992291,
+        "HomeCompetitorName": "Jeonbuk Motors",
+        "AwayCompetitorName": "Pohang Steelers",
+        "Code": 760,
+        "ExternalId": 36235799,
+        "StreamId": "8622231",
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1176,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1059109269,
+                "Odds": 2.25,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1059109270,
+                "Odds": 3.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1059109271,
+                "Odds": 3.15,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1059109334,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1059109351,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1059109398,
+                "Odds": 1.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1059109404,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1059109486,
+                "Odds": 1.68,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1059109487,
+                "Odds": 2.05,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1059109585,
+                "Odds": 3.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1059109601,
+                "Odds": 4.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2993341,
+        "HomeCompetitorName": "Ingulets",
+        "AwayCompetitorName": "Vorskla",
+        "Code": 409,
+        "ExternalId": 35382373,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1016,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1059913685,
+                "Odds": 3.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1059913686,
+                "Odds": 3.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1059913687,
+                "Odds": 1.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1059913750,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1059913767,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1059913814,
+                "Odds": 1.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1059913820,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1059913902,
+                "Odds": 1.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1059913903,
+                "Odds": 1.97,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1059914001,
+                "Odds": 6.15,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1059914017,
+                "Odds": 2.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2998566,
+        "HomeCompetitorName": "Kagoshima Utd.",
+        "AwayCompetitorName": "Parceiro Nagano",
+        "Code": 3141,
+        "ExternalId": 31770195,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 3053,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1060629328,
+                "Odds": 2.00,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1060629329,
+                "Odds": 3.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1060629330,
+                "Odds": 3.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1060629393,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1060629410,
+                "Odds": 1.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1060629457,
+                "Odds": 1.73,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1060629463,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1060629545,
+                "Odds": 1.77,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1060629546,
+                "Odds": 1.93,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1060629644,
+                "Odds": 3.15,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1060629660,
+                "Odds": 5.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 2998701,
+        "HomeCompetitorName": "Tukums 2000",
+        "AwayCompetitorName": "Auda",
+        "Code": 403,
+        "ExternalId": 32049345,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1749,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1060663596,
+                "Odds": 5.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1060663597,
+                "Odds": 3.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1060663598,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1060663661,
+                "Odds": 1.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1060663678,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1060663725,
+                "Odds": 1.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1060663731,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1060663813,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1060663814,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1060663912,
+                "Odds": 10.60,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1060663928,
+                "Odds": 2.33,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3000343,
+        "HomeCompetitorName": "Belshina",
+        "AwayCompetitorName": "Dinamo Brest",
+        "Code": 3032,
+        "ExternalId": 32226091,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1785,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1060826422,
+                "Odds": 2.60,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1060826423,
+                "Odds": 3.25,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1060826424,
+                "Odds": 2.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1060826513,
+                "Odds": 1.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1060826530,
+                "Odds": 2.03,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1060826577,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1060826583,
+                "Odds": 1.60,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1060826665,
+                "Odds": 1.82,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1060826666,
+                "Odds": 1.87,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1060826764,
+                "Odds": 4.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1060826780,
+                "Odds": 4.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003369,
+        "HomeCompetitorName": "Cheongju FC",
+        "AwayCompetitorName": "Gimhae City",
+        "Code": 3180,
+        "ExternalId": 35932923,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 3836,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061131418,
+                "Odds": 2.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061131419,
+                "Odds": 3.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061131420,
+                "Odds": 2.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061131483,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061131500,
+                "Odds": 1.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061131547,
+                "Odds": 1.73,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061131553,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061131635,
+                "Odds": 1.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061131636,
+                "Odds": 2.00,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061131734,
+                "Odds": 3.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061131750,
+                "Odds": 4.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003472,
+        "HomeCompetitorName": "Thanh Hoa",
+        "AwayCompetitorName": "Binh Dinh",
+        "Code": 3053,
+        "ExternalId": 35072133,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1916,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061194025,
+                "Odds": 2.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061194026,
+                "Odds": 2.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061194027,
+                "Odds": 3.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061194090,
+                "Odds": 1.68,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061194107,
+                "Odds": 2.05,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061194154,
+                "Odds": 1.83,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061194160,
+                "Odds": 1.62,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061194242,
+                "Odds": 1.77,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061194243,
+                "Odds": 1.93,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061194341,
+                "Odds": 3.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061194357,
+                "Odds": 5.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003633,
+        "HomeCompetitorName": "Yenisey",
+        "AwayCompetitorName": "Dynamo Makhachkala",
+        "Code": 3329,
+        "ExternalId": 34217137,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 32,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061316799,
+                "Odds": 1.95,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061316800,
+                "Odds": 2.95,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061316801,
+                "Odds": 4.35,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061316864,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061316881,
+                "Odds": 2.42,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061316928,
+                "Odds": 2.05,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061316934,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061317016,
+                "Odds": 2.08,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061317017,
+                "Odds": 1.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061317115,
+                "Odds": 3.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061317131,
+                "Odds": 8.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003653,
+        "HomeCompetitorName": "Betis W",
+        "AwayCompetitorName": "Tenerife W",
+        "Code": 3554,
+        "ExternalId": 35452369,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1891,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061351354,
+                "Odds": 2.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061351355,
+                "Odds": 3.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061351356,
+                "Odds": 2.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061351419,
+                "Odds": 1.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061351436,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061351483,
+                "Odds": 1.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061351489,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061351573,
+                "Odds": 1.67,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061351574,
+                "Odds": 2.07,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061351672,
+                "Odds": 4.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061351688,
+                "Odds": 3.35,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003654,
+        "HomeCompetitorName": "Alaves W",
+        "AwayCompetitorName": "Villarreal W",
+        "Code": 3555,
+        "ExternalId": 35452375,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1891,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061352331,
+                "Odds": 2.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061352332,
+                "Odds": 3.35,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061352333,
+                "Odds": 2.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061352396,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061352413,
+                "Odds": 1.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061352460,
+                "Odds": 1.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061352466,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061352550,
+                "Odds": 1.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061352551,
+                "Odds": 2.05,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061352649,
+                "Odds": 3.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061352665,
+                "Odds": 3.95,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3003723,
+        "HomeCompetitorName": "Ytterhogdals IK",
+        "AwayCompetitorName": "Storfors AIK",
+        "Code": 3429,
+        "ExternalId": 31864353,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 630,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061412316,
+                "Odds": 2.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061412317,
+                "Odds": 3.70,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061412318,
+                "Odds": 2.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061412381,
+                "Odds": 2.60,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061412398,
+                "Odds": 1.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061412471,
+                "Odds": 1.42,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061412477,
+                "Odds": 1.30,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061412559,
+                "Odds": 1.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061412560,
+                "Odds": 2.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061412658,
+                "Odds": 3.60,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061412674,
+                "Odds": 2.85,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3004335,
+        "HomeCompetitorName": "Wolfsburg U19",
+        "AwayCompetitorName": "Magdeburg U19",
+        "Code": 3524,
+        "ExternalId": 34709539,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1100,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061877454,
+                "Odds": 1.27,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061877455,
+                "Odds": 5.20,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061877456,
+                "Odds": 7.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061877519,
+                "Odds": 3.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061877536,
+                "Odds": 1.25,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061877583,
+                "Odds": 1.27,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061877589,
+                "Odds": 1.18,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061877671,
+                "Odds": 1.48,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061877672,
+                "Odds": 2.45,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061877770,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061877786,
+                "Odds": 10.90,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3004345,
+        "HomeCompetitorName": "Heidenheim U19",
+        "AwayCompetitorName": "Reutlingen U19",
+        "Code": 4009,
+        "ExternalId": 34710071,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 1021,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061884588,
+                "Odds": 1.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061884589,
+                "Odds": 4.35,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061884590,
+                "Odds": 4.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061884653,
+                "Odds": 2.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061884670,
+                "Odds": 1.42,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061884717,
+                "Odds": 0.00,
+                "IsEnabled": false,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061884723,
+                "Odds": 0.00,
+                "IsEnabled": false,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061884805,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061884806,
+                "Odds": 2.32,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061884904,
+                "Odds": 1.95,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061884920,
+                "Odds": 6.75,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    },
+    {
+        "Id": 3004432,
+        "HomeCompetitorName": "Castelo Branco",
+        "AwayCompetitorName": "Farense",
+        "Code": 3992,
+        "ExternalId": 36083513,
+        "StreamId": null,
+        "StartDate": "2022-10-01T12:00:00",
+        "Status": 0,
+        "CompetitionId": 534,
+        "SportId": 1,
+        "FavouriteBets": [
+            {
+                "Id": 1061946942,
+                "Odds": 11.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5000
+            },
+            {
+                "Id": 1061946943,
+                "Odds": 5.50,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5001
+            },
+            {
+                "Id": 1061946944,
+                "Odds": 1.22,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5002
+            },
+            {
+                "Id": 1061947007,
+                "Odds": 2.12,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5101
+            },
+            {
+                "Id": 1061947024,
+                "Odds": 1.65,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5118
+            },
+            {
+                "Id": 1061947071,
+                "Odds": 1.55,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5306
+            },
+            {
+                "Id": 1061947077,
+                "Odds": 1.40,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5312
+            },
+            {
+                "Id": 1061947159,
+                "Odds": 2.35,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5350
+            },
+            {
+                "Id": 1061947160,
+                "Odds": 1.52,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5351
+            },
+            {
+                "Id": 1061947258,
+                "Odds": 24.00,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5506
+            },
+            {
+                "Id": 1061947274,
+                "Odds": 1.80,
+                "IsEnabled": true,
+                "HandicapOrTotalParam": null,
+                "ScoreParam": null,
+                "PeriodParam": null,
+                "AdditionalParam": null,
+                "BetGameOutcomeId": 5522
+            }
+        ],
+        "AllBets": null
+    }
+]
