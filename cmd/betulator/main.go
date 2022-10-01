@@ -14,20 +14,16 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 )
 
-func CollectHouseSportEvents(getEvents func() ([]model.Event, error)) []model.Event {
-	start := time.Now()
+func CollectAndSortHouseSportEvents(getEvents func() ([]model.Event, error)) ([]model.Event, error) {
 
 	events, err := getEvents()
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
-
-	fmt.Printf("\nCollected: %d events", len(events))
-	fmt.Printf("\nTook: %f secs\n", time.Since(start).Seconds())
 
 	util.SortByOutcome(events)
 
-	return events
+	return events, nil
 }
 
 func createOutcomeWordMatrix(outcomes []string) [][]string {
@@ -78,8 +74,8 @@ func CheckIfEventsMatch(currentEvent model.Event, newEvent model.Event) bool {
 
 		for outcomeIndx, word := range combination {
 
-			// skip words with less than 4 letters
-			if len(word) < 4 {
+			// skip words with less than 4 letters or women
+			if len(word) < 4 || word == "women" {
 				found = false
 				break
 			}
@@ -110,7 +106,7 @@ func CheckIfEventsMatch(currentEvent model.Event, newEvent model.Event) bool {
 	return false
 }
 
-func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event, house string) {
+func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event) {
 
 	for _, newEvent := range newEvents {
 
@@ -120,14 +116,14 @@ func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event, house
 		for _, event := range *events {
 			if CheckIfEventsMatch(event, newEvent) {
 
-				fmt.Println("Same are: ", event.Outcome, newEvent.Outcome)
+				fmt.Println("Merged: ", event.Outcome, newEvent.Outcome)
 
 				// merge best odds
 				for indx := range event.Odds {
 					if newEvent.Odds[indx].Cmp(event.Odds[indx]) == 1 {
 						event.Outcome[indx] = newEvent.Outcome[indx]
 						event.Odds[indx] = newEvent.Odds[indx]
-						event.House[indx] = house
+						event.House[indx] = newEvent.House[indx]
 					}
 				}
 				found = true
@@ -147,17 +143,44 @@ func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event, house
 	}
 }
 
+func worker(getEvents func() ([]model.Event, error), house string, results chan<- *[]model.Event) {
+
+	start := time.Now()
+
+	fmt.Println("Started scraping ", house, "..")
+	events, err := CollectAndSortHouseSportEvents(getEvents)
+	if err != nil {
+		fmt.Println("Scraping", house, "failed with error: ", err)
+		results <- nil
+	}
+	fmt.Println("Finished scraping", house, "in", time.Since(start).Seconds(), "secs, took:", len(events), "events")
+
+	results <- &events
+}
+
 func main() {
 
-	// mozzartbetFootballEvents := CollectHouseSportEvents(mozzartbet.GetFootballEvents)
-	meridianbetFootballEvents := CollectHouseSportEvents(meridianbet.GetFootballEvents)
-	soccerbetFootballEvents := CollectHouseSportEvents(soccerbet.GetFootballEvents)
+	const numJobs = 2
+	results := make(chan *[]model.Event, numJobs)
 
+	// mozzartbetFootballEvents := CollectHouseSportEvents(mozzartbet.GetFootballEvents)
+	go worker(meridianbet.GetFootballEvents, "meridianbet", results)
+	go worker(soccerbet.GetFootballEvents, "soccerbet", results)
+
+	fetchedEvents := make([][]model.Event, numJobs)
+
+	for i := 1; i <= numJobs; i++ {
+		fetchedEvents = append(fetchedEvents, *<-results)
+	}
+
+	fmt.Println("Scraping Completed!")
+
+	fmt.Println("\nMerging Events..")
 	events := make([]model.Event, 0)
 
-	// MergeEventsByBestOdds(events, mozzartbetFootballEvents)
-	MergeEventsByBestOdds(&events, meridianbetFootballEvents, "meridianbet")
-	MergeEventsByBestOdds(&events, soccerbetFootballEvents, "soccerbet")
+	for _, houseEvents := range fetchedEvents {
+		MergeEventsByBestOdds(&events, houseEvents)
+	}
 
 	// // sort events array by time
 	// sort.Slice(eventsArr, func(i, j int) bool {
@@ -166,9 +189,10 @@ func main() {
 
 	fmt.Println("Events Sum: ", len(events))
 
-	for _, event := range events {
-		ShowEvent(event)
-	}
+	// for _, event := range events {
+
+	// 	ShowEvent(event)
+	// }
 
 }
 
