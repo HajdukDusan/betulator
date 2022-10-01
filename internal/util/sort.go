@@ -9,14 +9,14 @@ func SortByOutcome(events []model.Event) {
 		n := len(event.Outcome)
 		for i := 0; i < n; i++ {
 
-			if event.Outcome[i] == "draw" {
+			if event.Outcome[i] == "Draw" {
 				continue
 			}
 
 			var minIdx = i
 			for j := i; j < n; j++ {
 
-				if event.Outcome[j] == "draw" {
+				if event.Outcome[j] == "Draw" {
 					continue
 				}
 

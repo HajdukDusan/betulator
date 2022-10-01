@@ -5,22 +5,13 @@ import (
 	"betulator/internal/util"
 	"betulator/pkg/model"
 	"betulator/pkg/scrapers/meridianbet"
-	"betulator/pkg/scrapers/soccerbet"
 	"fmt"
 	"os"
 	"strings"
 	"time"
 
 	"github.com/jedib0t/go-pretty/v6/table"
-	"github.com/shopspring/decimal"
 )
-
-type Event struct {
-	Outcome   []string
-	Odds      []decimal.Decimal
-	House     []string
-	StartTime time.Time
-}
 
 func CollectHouseSportEvents(getEvents func() ([]model.Event, error)) []model.Event {
 	start := time.Now()
@@ -54,77 +45,97 @@ func createOutcomeWordMatrix(outcomes []string) [][]string {
 	return result
 }
 
-func recursion(matrix *[][]string, combinations *[]string, rowIndx int, curr []string) {
+func createPossibleCombinations(wordsMatrix *[][]string, combinations *[][]string, rowIndx int, currComb []string) {
 
-	if row >= len(*matrix) {
+	if rowIndx >= len(*wordsMatrix) {
+		(*combinations) = append(*combinations, currComb)
 		return
 	}
 
-	for x := row; x < len((*matrix)[row]); x++ {
-		recursion(matrix, combinations, row+1)
+	for j := 0; j < len((*wordsMatrix)[rowIndx]); j++ {
+
+		cpyComb := make([]string, len(currComb))
+		copy(cpyComb, currComb)
+
+		cpyComb = append(cpyComb, (*wordsMatrix)[rowIndx][j])
+
+		createPossibleCombinations(wordsMatrix, combinations, rowIndx+1, cpyComb)
 	}
 }
 
-func createPossibleKeys(outcomes []string) {
-	result := []string{}
+func CheckIfEventsMatch(currentEvent model.Event, newEvent model.Event) bool {
 
-	outcomesWords := createOutcomeWordMatrix(outcomes)
+	wordsMatrix := createOutcomeWordMatrix(currentEvent.Outcome)
 
-	for i := 0; i < len(outcomesWords); i++ {
+	combinations := make([][]string, 0)
 
-		for j := 0; j < len(outcomesWords[j]); j++ {
+	createPossibleCombinations(&wordsMatrix, &combinations, 0, []string{})
 
+	for _, combination := range combinations {
+
+		found := true
+
+		for outcomeIndx, word := range combination {
+
+			wordFound := false
+
+			outcomeWords := strings.Fields(strings.ToLower(newEvent.Outcome[outcomeIndx]))
+
+			for _, outcomeWord := range outcomeWords {
+
+				if outcomeWord == word {
+					wordFound = true
+					break
+				}
+			}
+
+			if wordFound == false {
+				found = false
+				break
+			}
+		}
+
+		if found {
+			return true
 		}
 	}
 
-	for _, words := range outcomesWords {
-
-		for _, word := range words {
-
-		}
-	}
-
-	for indx := range outcomes {
-		result += strings.ToLower(event.Outcome[indx]) + ","
-	}
-	return result
+	return false
 }
 
-func MergeEventsByBestOdds(events map[string]Event, newEvents []model.Event, house string) {
+func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event, house string) {
 
-	for _, event := range newEvents {
+	for _, newEvent := range newEvents {
 
 		found := false
 
-		for {
-			_, ok := events[outcomesKey]
-			if ok == true {
+		// try to find existing event
+		for _, event := range *events {
+			if CheckIfEventsMatch(event, newEvent) {
 
-				for indx := range events[outcomesKey].Odds {
+				fmt.Println("isti su", event.Outcome, newEvent.Outcome)
 
-					if events[outcomesKey].Odds[indx].Cmp(event.Odds[indx]) == 1 {
-						events[outcomesKey].Odds[indx] = event.Odds[indx]
-						events[outcomesKey].House[indx] = house
+				// merge best odds
+				for indx := range event.Odds {
+					if newEvent.Odds[indx].Cmp(event.Odds[indx]) == 1 {
+						event.Outcome[indx] = newEvent.Outcome[indx]
+						event.Odds[indx] = newEvent.Odds[indx]
+						event.House[indx] = house
 					}
 				}
+				found = true
+				break
 			}
 		}
 
-		if found == false {
-			houses := []string{}
+		if !found {
 
-			for i := 0; i < len(event.Outcome); i++ {
-				houses = append(houses, house)
-			}
-
-			event := Event{
-				Outcome:   event.Outcome,
-				Odds:      event.Odds,
-				House:     houses,
-				StartTime: event.StartTime,
-			}
-
-			events[outcomesKey] = event
+			(*events) = append(*events, model.Event{
+				Outcome:   newEvent.Outcome,
+				Odds:      newEvent.Odds,
+				House:     newEvent.House,
+				StartTime: newEvent.StartTime,
+			})
 		}
 	}
 }
@@ -133,13 +144,14 @@ func main() {
 
 	// mozzartbetFootballEvents := CollectHouseSportEvents(mozzartbet.GetFootballEvents)
 	meridianbetFootballEvents := CollectHouseSportEvents(meridianbet.GetFootballEvents)
-	soccerbetFootballEvents := CollectHouseSportEvents(soccerbet.GetFootballEvents)
 
-	events := map[string]Event{}
+	// soccerbetFootballEvents := CollectHouseSportEvents(soccerbet.GetFootballEvents)
+
+	events := make([]model.Event, 0)
 
 	// MergeEventsByBestOdds(events, mozzartbetFootballEvents)
-	MergeEventsByBestOdds(events, meridianbetFootballEvents, "meridianbet")
-	MergeEventsByBestOdds(events, soccerbetFootballEvents, "soccerbet")
+	MergeEventsByBestOdds(&events, meridianbetFootballEvents, "meridianbet")
+	// MergeEventsByBestOdds(events, soccerbetFootballEvents, "soccerbet")
 
 	// // sort events array by time
 	// sort.Slice(eventsArr, func(i, j int) bool {
@@ -154,7 +166,7 @@ func main() {
 
 }
 
-func ShowEvent(event Event) {
+func ShowEvent(event model.Event) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 

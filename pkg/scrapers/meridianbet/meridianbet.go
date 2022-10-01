@@ -16,7 +16,7 @@ func GetFootballEvents() ([]model.Event, error) {
 
 	currentTime := time.Now().Format(time.RFC3339)
 
-	jsonResult, err := httprequest.Get("https://meridianbet.rs/sails/sport-with-leagues/58/date/" + currentTime + "/filter/oneDay/offset/0?filterPositions=0,0,0")
+	jsonResult, err := httprequest.Get("https://meridianbet.rs/sails/sport/58/date/" + currentTime + "/filter/all/offset/0?filterPositions=0,0,0")
 	if err != nil {
 		return nil, err
 	}
@@ -34,39 +34,43 @@ func GetFootballEvents() ([]model.Event, error) {
 
 	events := []model.Event{}
 
-	for _, eventGroup := range parsedData.Events {
+	for _, event := range parsedData.Events {
 
-		for _, event := range eventGroup.Events {
-
-			oddsA, err := decimal.NewFromString(event.MarketShort[0].Selection[0].Price)
-			if err != nil {
-				return nil, err
-			}
-			oddsDraw, err := decimal.NewFromString(event.MarketShort[0].Selection[1].Price)
-			if err != nil {
-				return nil, err
-			}
-			oddsB, err := decimal.NewFromString(event.MarketShort[0].Selection[2].Price)
-			if err != nil {
-				return nil, err
-			}
-
-			newEvent := model.Event{
-				Outcome: []string{
-					event.Team[0].Name,
-					"draw",
-					event.Team[1].Name,
-				},
-				Odds: []decimal.Decimal{
-					oddsA,
-					oddsDraw,
-					oddsB,
-				},
-				StartTime: event.StartTime,
-			}
-
-			events = append(events, newEvent)
+		oddsA, err := decimal.NewFromString(event.StandardShortMarkets[0].Selection[0].Price)
+		if err != nil {
+			return nil, err
 		}
+		oddsDraw, err := decimal.NewFromString(event.StandardShortMarkets[0].Selection[1].Price)
+		if err != nil {
+			return nil, err
+		}
+		oddsB, err := decimal.NewFromString(event.StandardShortMarkets[0].Selection[2].Price)
+		if err != nil {
+			return nil, err
+		}
+
+		house := []string{
+			"meridianbet",
+			"meridianbet",
+			"meridianbet",
+		}
+
+		newEvent := model.Event{
+			Outcome: []string{
+				event.Team[0].Name,
+				"Draw",
+				event.Team[1].Name,
+			},
+			Odds: []decimal.Decimal{
+				oddsA,
+				oddsDraw,
+				oddsB,
+			},
+			StartTime: event.StartTime,
+			House:     house,
+		}
+
+		events = append(events, newEvent)
 	}
 
 	return events, nil

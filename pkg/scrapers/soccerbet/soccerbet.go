@@ -42,7 +42,7 @@ func GetFootballEvents() ([]model.Event, error) {
 
 		outcomes := []string{
 			event.HomeCompetitorName,
-			"draw",
+			"Draw",
 			event.AwayCompetitorName,
 		}
 
@@ -51,10 +51,17 @@ func GetFootballEvents() ([]model.Event, error) {
 			return nil, err
 		}
 
+		house := []string{
+			"soccerbet",
+			"soccerbet",
+			"soccerbet",
+		}
+
 		events = append(events, model.Event{
 			Outcome:   outcomes,
 			Odds:      odds,
 			StartTime: startTime,
+			House:     house,
 		})
 	}
 

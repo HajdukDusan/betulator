@@ -76,7 +76,7 @@ func GetFootballEvents() ([]model.Event, error) {
 
 						//startTime = nil
 
-						outcomes[1] = "draw"
+						outcomes[1] = "Draw"
 					} else if i == 1 {
 						outcomes[0] = query.Text()
 					} else if i == 2 {

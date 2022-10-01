@@ -9,5 +9,6 @@ import (
 type Event struct {
 	Outcome   []string
 	Odds      []decimal.Decimal
+	House     []string
 	StartTime time.Time
 }
