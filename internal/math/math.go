@@ -2,7 +2,7 @@ package math
 
 import "github.com/shopspring/decimal"
 
-func CalculateOdds(odds []decimal.Decimal) decimal.Decimal {
+func CalculateTotalOdds(odds []decimal.Decimal) decimal.Decimal {
 
 	result := decimal.Zero
 

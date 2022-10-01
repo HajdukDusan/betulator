@@ -8,6 +8,7 @@ import (
 	"betulator/pkg/scrapers/soccerbet"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 	"time"
 
@@ -21,9 +22,19 @@ func CollectAndSortHouseSportEvents(getEvents func() ([]model.Event, error)) ([]
 		return nil, err
 	}
 
-	util.SortByOutcome(events)
+	util.SortIndividualEventsByOutcome(events)
 
 	return events, nil
+}
+
+func sortAllByTotalOdds(events []model.Event) {
+	sort.Slice(events, func(i, j int) bool {
+		return math.CalculateTotalOdds(events[i].Odds).Cmp(math.CalculateTotalOdds(events[j].Odds)) == -1
+	})
+	// sort events array by time
+	// sort.Slice(eventsArr, func(i, j int) bool {
+	// 	return eventsArr[i].StartTime.Before(eventsArr[j].StartTime)
+	// })
 }
 
 func createOutcomeWordMatrix(outcomes []string) [][]string {
@@ -147,10 +158,10 @@ func worker(getEvents func() ([]model.Event, error), house string, results chan<
 
 	start := time.Now()
 
-	fmt.Println("Started scraping ", house, "..")
+	fmt.Println("Started scraping", house, "..")
 	events, err := CollectAndSortHouseSportEvents(getEvents)
 	if err != nil {
-		fmt.Println("Scraping", house, "failed with error: ", err)
+		fmt.Println("Scraping", house, "failed with error:", err)
 		results <- nil
 	}
 	fmt.Println("Finished scraping", house, "in", time.Since(start).Seconds(), "secs, took:", len(events), "events")
@@ -182,17 +193,13 @@ func main() {
 		MergeEventsByBestOdds(&events, houseEvents)
 	}
 
-	// // sort events array by time
-	// sort.Slice(eventsArr, func(i, j int) bool {
-	// 	return eventsArr[i].StartTime.Before(eventsArr[j].StartTime)
-	// })
-
 	fmt.Println("Events Sum: ", len(events))
 
-	// for _, event := range events {
+	sortAllByTotalOdds(events)
 
-	// 	ShowEvent(event)
-	// }
+	for i := 0; i < 10; i++ {
+		ShowEvent(events[i])
+	}
 
 }
 
@@ -212,7 +219,7 @@ func ShowEvent(event model.Event) {
 		t.AppendSeparator()
 	}
 
-	totalOdds := math.CalculateOdds(event.Odds)
+	totalOdds := math.CalculateTotalOdds(event.Odds)
 
 	t.AppendSeparator()
 	t.AppendFooter(table.Row{"Total Odds", totalOdds})

@@ -2,7 +2,7 @@ package util
 
 import "betulator/pkg/model"
 
-func SortByOutcome(events []model.Event) {
+func SortIndividualEventsByOutcome(events []model.Event) {
 
 	for _, event := range events {
 
