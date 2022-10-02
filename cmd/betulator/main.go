@@ -5,6 +5,7 @@ import (
 	"betulator/internal/util"
 	"betulator/pkg/model"
 	"betulator/pkg/scrapers/meridianbet"
+	"betulator/pkg/scrapers/mozzartbet"
 	"betulator/pkg/scrapers/soccerbet"
 	"fmt"
 	"os"
@@ -73,44 +74,40 @@ func createPossibleCombinations(wordsMatrix *[][]string, combinations *[][]strin
 
 func CheckIfEventsMatch(currentEvent model.Event, newEvent model.Event) bool {
 
-	wordsMatrix := createOutcomeWordMatrix(currentEvent.Outcome)
+	currentEventWordsMatrix := createOutcomeWordMatrix(currentEvent.Outcome)
+	newEventWordsMatrix := createOutcomeWordMatrix(newEvent.Outcome)
 
-	combinations := make([][]string, 0)
+	currentEventCombos := make([][]string, 0)
+	newEventCombos := make([][]string, 0)
 
-	createPossibleCombinations(&wordsMatrix, &combinations, 0, []string{})
+	createPossibleCombinations(&currentEventWordsMatrix, &currentEventCombos, 0, []string{})
+	createPossibleCombinations(&newEventWordsMatrix, &newEventCombos, 0, []string{})
 
-	for _, combination := range combinations {
+	for _, currEventCombo := range currentEventCombos {
 
-		found := true
+		for _, newEventCombo := range newEventCombos {
 
-		for outcomeIndx, word := range combination {
+			found := true
 
-			// skip words with less than 4 letters or women
-			if len(word) < 4 || word == "women" {
-				found = false
-				break
-			}
+			for indx := range currEventCombo {
 
-			wordFound := false
+				// skip words with less than 4 letters or women
+				if len(currEventCombo[indx]) < 4 ||
+					currEventCombo[indx] == "women" ||
+					currEventCombo[indx] == "city" {
+					found = false
+					break
+				}
 
-			outcomeWords := strings.Fields(strings.ToLower(newEvent.Outcome[outcomeIndx]))
-
-			for _, outcomeWord := range outcomeWords {
-
-				if outcomeWord == word {
-					wordFound = true
+				if currEventCombo[indx] != newEventCombo[indx] {
+					found = false
 					break
 				}
 			}
 
-			if wordFound == false {
-				found = false
-				break
+			if found {
+				return true
 			}
-		}
-
-		if found {
-			return true
 		}
 	}
 
@@ -125,6 +122,9 @@ func MergeEventsByBestOdds(events *[]model.Event, newEvents []model.Event) {
 
 		// try to find existing event
 		for _, event := range *events {
+
+			//[Maccabi Haifa FC Draw Maccabi Tel Aviv FC] [Maccabi Herzliya Draw Maccabi Ironi Ashdod]!!!
+
 			if CheckIfEventsMatch(event, newEvent) {
 
 				fmt.Println("Merged: ", event.Outcome, newEvent.Outcome)
@@ -171,10 +171,10 @@ func worker(getEvents func() ([]model.Event, error), house string, results chan<
 
 func main() {
 
-	const numJobs = 2
+	const numJobs = 3
 	results := make(chan *[]model.Event, numJobs)
 
-	// mozzartbetFootballEvents := CollectHouseSportEvents(mozzartbet.GetFootballEvents)
+	go worker(mozzartbet.GetFootballEvents, "mozzartbet", results)
 	go worker(meridianbet.GetFootballEvents, "meridianbet", results)
 	go worker(soccerbet.GetFootballEvents, "soccerbet", results)
 
@@ -196,6 +196,10 @@ func main() {
 	fmt.Println("Events Sum: ", len(events))
 
 	sortAllByTotalOdds(events)
+
+	// for _, event := range events {
+	// 	ShowEvent(event)
+	// }
 
 	for i := 0; i < 10; i++ {
 		ShowEvent(events[i])

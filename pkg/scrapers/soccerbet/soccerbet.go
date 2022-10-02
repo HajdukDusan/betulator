@@ -4,7 +4,6 @@ import (
 	"betulator/pkg/httprequest"
 	"betulator/pkg/model"
 	"encoding/json"
-	"fmt"
 	"strconv"
 	"time"
 
@@ -17,7 +16,7 @@ func GetFootballEvents() ([]model.Event, error) {
 
 	events := []model.Event{}
 
-	for i := 1; i <= 5; i++ {
+	for i := 1; i <= 20; i++ {
 
 		jsonResult, err := httprequest.Get("https://soccerbet.rs/api/Prematch/GetPagedSportMatches?sportId=1&pageNumber=" + strconv.Itoa(i))
 		if err != nil {
@@ -31,7 +30,6 @@ func GetFootballEvents() ([]model.Event, error) {
 		err = json.Unmarshal(resultBytes, &parsedData)
 
 		if err != nil {
-			fmt.Println(err)
 			return nil, err
 		}
 

@@ -1,6 +1,7 @@
 package httprequest
 
 import (
+	"bytes"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
@@ -9,6 +10,24 @@ import (
 func Get(url string) (string, error) {
 
 	response, err := http.Get(url)
+	if err != nil {
+		return "", err
+	}
+
+	//We Read the response body on the line below.
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		return "", err
+	}
+
+	response.Body.Close()
+
+	return string(body), nil
+}
+
+func PostJson(url string, jsonData []byte) (string, error) {
+
+	response, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
 	if err != nil {
 		return "", err
 	}
